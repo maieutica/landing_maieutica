@@ -1,0 +1,367 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta name="generator" content="Primo" />
+      <!-- HEAD_svelte-174itbn_START --><style>/* Reset & standardize default styles */
+@import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css") layer;
+
+/* Design tokens (apply to components) */
+:root {
+  /* Custom theme options */
+  --color-accent: #0F4C81;
+  --color-accent-2: #ff794d;
+
+  /* Base values */
+  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+  --border-radius: 8px;
+  --border-color: #e1ecf0;
+}
+
+/* Root element (use instead of `body`) */
+#page {
+  font-family: system-ui, sans-serif;
+  color: #1d263a;
+  line-height: 1.2;
+  font-size: 1.125rem;
+  background: white;
+}
+
+/* Elements */
+.section-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+a.link {
+  line-height: 1.3;
+  font-weight: 500;
+  border-bottom: 2px solid;
+  transform: translateY(-2px); /* move link back into place */
+  transition: var(--transition, 0.1s border);
+}
+
+a.link:hover {
+    border-color: transparent;
+  }
+
+.heading {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.subheading {
+  font-weight: 400;
+  line-height: 1.5;
+  opacity: 90%;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: white;
+  font-weight: 500;
+  background: var(--color-accent, rebeccapurple);
+  border-radius: 3rem;
+  padding: 15px 25px;
+  transition: var(--transition, 0.1s box-shadow);
+  border: 0;
+}
+
+/* reset */
+
+.button:hover {
+    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);
+  }
+
+.button.inverted {
+    background: transparent;
+    color: var(--color-accent, rebeccapurple);
+  }
+
+/* Content Section */
+.section .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+.section .content p {
+    padding: 0.25rem 0;
+    line-height: 1.5;
+  }
+.section .content img {
+    width: 100%;
+    margin: 2rem 0;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+  }
+.section .content a.link {
+  }
+.section .content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+.section .content h2 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+.section .content h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+.section .content ul {
+    list-style: disc;
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+  }
+.section .content ol {
+    list-style: decimal;
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+  }
+.section .content blockquote {
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+  }
+</style><!-- HEAD_svelte-174itbn_END -->
+      <style>.section-container.svelte-1d1kcsx.svelte-1d1kcsx{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem}.logo.svelte-1d1kcsx.svelte-1d1kcsx{font-size:1.5rem;font-weight:600;line-height:1.2;max-width:150px}.desktop-nav.svelte-1d1kcsx.svelte-1d1kcsx{display:none;align-items:center;justify-content:space-between;width:100%}.desktop-nav.svelte-1d1kcsx nav.svelte-1d1kcsx{display:flex;align-items:center;gap:1.5rem}.desktop-nav.svelte-1d1kcsx nav a.link.svelte-1d1kcsx{border-color:transparent;transition:border-color 0.1s;font-size:0.95rem}.desktop-nav.svelte-1d1kcsx nav a.link.svelte-1d1kcsx:hover{border-color:initial}@media(min-width: 800px){.desktop-nav.svelte-1d1kcsx.svelte-1d1kcsx{display:flex
+}}.mobile-nav.svelte-1d1kcsx.svelte-1d1kcsx{display:flex;align-items:center;justify-content:space-between;width:100%;font-weight:500}@media(min-width: 800px){.mobile-nav.svelte-1d1kcsx.svelte-1d1kcsx{display:none
+}}#popup.svelte-1d1kcsx.svelte-1d1kcsx{font-size:1.25rem;display:grid;gap:1rem;position:absolute;text-align:center;background-color:var(--background-color, white);box-shadow:var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));border-radius:var(--border-radius);inset:0.5rem;bottom:initial;padding:2rem;z-index:1}#popup.svelte-1d1kcsx button#close.svelte-1d1kcsx{position:absolute;right:1rem;top:1rem}
+section.svelte-7g18vb{position:relative;min-height:60vh}.section-container.svelte-7g18vb{padding-block:6rem}.section-container.svelte-7g18vb:before{content:'';position:absolute;inset:0;height:100%;width:100%;background:linear-gradient(120deg, rgba(15,76,129,1) 0%, rgba(11,36,124,0.8) 15%, rgba(9,9,121,0.6) 50%, rgba(20,53,139,0.4) 70%);z-index:1}.main.svelte-7g18vb{display:grid;gap:2rem;place-items:start;position:relative;z-index:1;color:white}.headline.svelte-7g18vb{font-size:3rem;font-weight:600;line-height:1.1}.subheading.svelte-7g18vb{line-height:1.5}.main.svelte-7g18vb{max-width:450px}img.svelte-7g18vb{position:absolute;inset:0;width:100%;height:100%;-o-object-fit:cover;object-fit:cover}.button.svelte-7g18vb{background-color:#FFA500 }
+.section-container.svelte-1pme7pn.svelte-1pme7pn{display:flex;flex-direction:column;gap:2rem}.heading.svelte-1pme7pn.svelte-1pme7pn{text-align:center;margin-bottom:1rem}ol.svelte-1pme7pn.svelte-1pme7pn{display:grid;grid-template-columns:repeat(auto-fit, minmax(20rem, 1fr));place-items:flex-start;gap:2rem}ol.svelte-1pme7pn li.svelte-1pme7pn{display:flex;gap:1rem;border:1px solid #FFA500 ;border-radius:var(--border-radius);padding:2rem}ol.svelte-1pme7pn .body.svelte-1pme7pn{display:grid;gap:0.5rem}ol.svelte-1pme7pn .body .title.svelte-1pme7pn{color:var(--color-heading);font-weight:600;font-size:1.25rem}.button.svelte-1pme7pn.svelte-1pme7pn{display:inline-flex;align-self:flex-end;gap:0.5rem}.button.svelte-1pme7pn svg{transition:transform 0.2s}.button.svelte-1pme7pn:hover svg{transform:translateX(3px)}
+.section-container.svelte-2jrqcr.svelte-2jrqcr{display:grid;justify-content:center}.card.svelte-2jrqcr.svelte-2jrqcr{padding:4rem clamp(2rem, 10vw, 7rem);border:1px solid var(--border-color, #eee);border-radius:var(--border-radius);text-align:center;display:grid;background-color:#0F4C81;color:ghostwhite}.heading.svelte-2jrqcr.svelte-2jrqcr{margin-bottom:1.5rem;color:ghostwhite}.body.svelte-2jrqcr.svelte-2jrqcr{max-width:700px;margin-bottom:2.25rem}.buttons.svelte-2jrqcr.svelte-2jrqcr{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem}.buttons.svelte-2jrqcr .button.svelte-2jrqcr{background-color:#FFA500 ;display:flex;align-items:center;gap:0.25rem}
+.heading.svelte-1qguxgp{text-align:center;margin-bottom:3rem}ul.svelte-1qguxgp{display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));place-content:center center;place-items:center center;gap:1.5rem}li.svelte-1qguxgp{padding:1.5rem;border:1px solid var(--border-color);border-radius:var(--border-radius);display:grid;gap:1rem}@media(min-width: 600px){li.svelte-1qguxgp{padding:2rem
+}}.icon.svelte-1qguxgp{font-size:2rem;color:#FFA500}.title.svelte-1qguxgp{font-weight:600;font-size:1.5rem;line-height:1.3}.description.svelte-1qguxgp{line-height:1.75rem}
+.section-container.svelte-1mz3n3v.svelte-1mz3n3v{display:grid;gap:clamp(50px, 10vw, 200px)}@media(min-width: 700px){.section-container.svelte-1mz3n3v.svelte-1mz3n3v{grid-template-columns:1fr 1fr
+}}.card.svelte-1mz3n3v.svelte-1mz3n3v{border-radius:var(--border-radius);box-shadow:var(--box-shadow);overflow:hidden;max-width:450px;background-color:#0F4C81;color:white}.card.svelte-1mz3n3v img.svelte-1mz3n3v{width:100%;-o-object-fit:contain;object-fit:contain;padding-top:20px;max-height:30vh}.card.svelte-1mz3n3v .card-content.svelte-1mz3n3v{padding:2rem;display:grid}@media(min-width: 700px){.card.svelte-1mz3n3v .card-content.svelte-1mz3n3v{padding:3rem
+  }}.card.svelte-1mz3n3v .card-content .title.svelte-1mz3n3v{font-weight:600;font-size:1.5rem;line-height:2rem;margin-bottom:1rem}.card.svelte-1mz3n3v .card-content .description.svelte-1mz3n3v{font-weight:400;line-height:1.6;margin-bottom:1.5rem}.card.svelte-1mz3n3v .card-content .button.svelte-1mz3n3v{text-align:center;background-color:#FFA500 }.main.svelte-1mz3n3v.svelte-1mz3n3v{display:grid;place-content:center start;gap:2rem;max-width:450px}.main.svelte-1mz3n3v ul.svelte-1mz3n3v{display:grid;gap:1rem}.main.svelte-1mz3n3v ul li.svelte-1mz3n3v{display:flex;align-items:center;gap:1rem}.main.svelte-1mz3n3v ul li .icon.svelte-1mz3n3v{font-size:1.5rem;color:#FFA500}.main.svelte-1mz3n3v ul li .label.svelte-1mz3n3v{font-weight:600;font-size:1.125rem;line-height:1.875rem}
+.section-container.svelte-5f4mlk.svelte-5f4mlk{padding-top:7rem}.heading.svelte-5f4mlk.svelte-5f4mlk{margin-bottom:3rem;text-align:center}.items.svelte-5f4mlk.svelte-5f4mlk{display:grid;grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));gap:5rem 3rem}.item.svelte-5f4mlk.svelte-5f4mlk{display:grid;place-content:start;gap:1rem}.item.svelte-5f4mlk .title.svelte-5f4mlk{color:var(--color-heading);font-size:1.5rem;font-weight:600;border-bottom:1px solid #0F4C81 }.left.svelte-5f4mlk .heading.svelte-5f4mlk{text-align:left}.number.svelte-5f4mlk.svelte-5f4mlk{color:#FFA500}
+.section-container.svelte-1ul9dl2{display:grid;gap:clamp(3rem, 10vw, 9rem);background:#0F4C81;color:ghostwhite;border-radius:10px}@media(min-width: 700px){.section-container.svelte-1ul9dl2{grid-template-columns:1fr 1fr
+}}.container.svelte-1ul9dl2{display:grid;place-content:center start;gap:1rem;max-width:450px}img.svelte-1ul9dl2{border-radius:var(--border-radius)}
+.section-container.svelte-88rbos.svelte-88rbos.svelte-88rbos{display:grid;place-items:center}.heading.svelte-88rbos.svelte-88rbos.svelte-88rbos{text-align:center;margin-bottom:1.5rem}.accordion.svelte-88rbos.svelte-88rbos.svelte-88rbos{width:100%;max-width:900px}.accordion.svelte-88rbos .item.svelte-88rbos.svelte-88rbos{padding:1.5rem 0}.accordion.svelte-88rbos .item.svelte-88rbos.svelte-88rbos:not(:last-child){border-bottom:1px solid #0F4C81}.accordion.svelte-88rbos .item.active button .icon.svelte-88rbos.svelte-88rbos{transform:scaleY(-1)}.accordion.svelte-88rbos .item button.svelte-88rbos.svelte-88rbos{display:flex;justify-content:space-between;align-items:center;width:100%}.accordion.svelte-88rbos .item button span.svelte-88rbos.svelte-88rbos{font-size:1.25rem;font-weight:600}.accordion.svelte-88rbos .item button .icon.svelte-88rbos.svelte-88rbos{font-size:1.25rem;color:#FFA500;transition:transform 0.2s}.accordion.svelte-88rbos .item button.svelte-88rbos+.description.svelte-88rbos{padding-top:0.5rem}.accordion.svelte-88rbos .item .description.svelte-88rbos.svelte-88rbos{padding-right:2rem}
+.section-container.svelte-15f55d3.svelte-15f55d3{display:grid;gap:2rem}@media(min-width: 800px){.section-container.svelte-15f55d3.svelte-15f55d3{grid-template-columns:3fr 2fr;gap:14rem
+}}.content.svelte-15f55d3.svelte-15f55d3{display:grid;place-content:flex-start;gap:1rem}.content.svelte-15f55d3 .body.svelte-15f55d3{margin-bottom:.5rem}.content.svelte-15f55d3 .social-links.svelte-15f55d3{display:grid;gap:0.75rem}.content.svelte-15f55d3 .social-links a.svelte-15f55d3{display:flex;align-items:center;gap:0.75rem}.content.svelte-15f55d3 .social-links a .icon.svelte-15f55d3{font-size:1.75rem;color:var(--color-accent, rebeccapurple);transition:var(--transition, 0.1s transform)}.content.svelte-15f55d3 .social-links a:hover .icon.svelte-15f55d3{transform:scale(1.1)}form.svelte-15f55d3.svelte-15f55d3{display:grid;gap:1rem;padding:2rem;border:1px solid var(--border-color, #eee);border-radius:var(--border-radius)}form.svelte-15f55d3 label.svelte-15f55d3{display:grid;gap:0.25rem}form.svelte-15f55d3 label span.svelte-15f55d3{font-size:0.75rem;font-weight:500}form.svelte-15f55d3 label input.svelte-15f55d3,form.svelte-15f55d3 label textarea.svelte-15f55d3{font-size:1rem;padding:0.5rem;outline-color:transparent;transition:var(--transition, 0.1s outline-color);border:1.5px solid var(--border-color, #eee);border-radius:4px}form.svelte-15f55d3 label input.svelte-15f55d3:focus,form.svelte-15f55d3 label textarea.svelte-15f55d3:focus{outline-color:var(--color-accent, rebeccapurple)}form.svelte-15f55d3 .button.svelte-15f55d3{margin-top:1rem}
+.section-container.svelte-18bom7r.svelte-18bom7r{display:flex;justify-content:space-between;flex-direction:column;align-items:center;gap:1rem;padding-top:1rem;padding-bottom:1rem}@media(min-width: 600px){.section-container.svelte-18bom7r.svelte-18bom7r{flex-direction:row
+}}nav.svelte-18bom7r.svelte-18bom7r{display:flex;gap:1rem}nav.svelte-18bom7r .link.svelte-18bom7r{border-color:transparent}nav.svelte-18bom7r .link.svelte-18bom7r:hover{border-color:initial}.primo.svelte-18bom7r.svelte-18bom7r{font-weight:600;font-size:0.75rem}.primo.svelte-18bom7r a.svelte-18bom7r{text-decoration:underline;color:#0F4C81}.social-links.svelte-18bom7r.svelte-18bom7r{display:flex;gap:1.5rem;font-size:1.5rem}.social-links.svelte-18bom7r a.svelte-18bom7r{color:var(--color-accent, rebeccapurple);transition:var(--transition, 0.1s transform)}.social-links.svelte-18bom7r a.svelte-18bom7r:hover{transform:scale(1.1)}</style>
+    </head>
+    <body id="page">
+       
+<div class="section" id="section-d9c32544"><header class="section-container svelte-1d1kcsx"><div class="desktop-nav svelte-1d1kcsx"><a href="/" class="logo svelte-1d1kcsx"><img src="https://jwcimbotfjfwtjjxuqkb.supabase.co/storage/v1/object/public/images/e3b8fe15-9bb1-4f72-8c6b-7fe89f31cf8e/1.png1691714192364" alt=""></a>
+    <nav class="svelte-1d1kcsx"><a class="link svelte-1d1kcsx" href="/about">About</a>
+      </nav></div>
+  <div class="mobile-nav svelte-1d1kcsx"><a href="/" class="logo svelte-1d1kcsx"><img src="https://jwcimbotfjfwtjjxuqkb.supabase.co/storage/v1/object/public/images/e3b8fe15-9bb1-4f72-8c6b-7fe89f31cf8e/1.png1691714192364" alt=""></a>
+    <button id="open" aria-label="Open mobile navigation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START --><g id="iconifySvelte0"><g id="iconifySvelte1"><g id="iconifySvelte2" fill="currentColor"><rect width="18" height="2" x="3" y="11" rx=".95" ry=".95"/><rect width="18" height="2" x="3" y="16" rx=".95" ry=".95"/><rect width="18" height="2" x="3" y="6" rx=".95" ry=".95"/></g></g></g><!-- HTML_TAG_END --></svg></button>
+    </div></header></div> 
+<div class="section" id="section-70685015"><section class="svelte-7g18vb"><div class="section-container svelte-7g18vb"><div class="main svelte-7g18vb"><h1 class="headline svelte-7g18vb">Transforming Ideas to Posibilities</h1>
+      <h2 class="subheading svelte-7g18vb">We transform imagination into innovation. With the Socratic method as our master tool. We are the architects of revolution, questioning, exploring, and crafting solutions that inspire and transform the world.</h2>
+      <a href="#contact" class="button svelte-7g18vb">Contact Us</a></div></div>
+  <img src="https://jwcimbotfjfwtjjxuqkb.supabase.co/storage/v1/object/public/images/e3b8fe15-9bb1-4f72-8c6b-7fe89f31cf8e/1691716502586pexels-rodolfo-clix-1036936.jpg" alt="five lightbulbs working as a newton cradle" class="svelte-7g18vb"></section></div> 
+<div class="section" id="section-f6e4378a"><section class="section-container svelte-1pme7pn"><h2 class="heading svelte-1pme7pn">Our Services</h2>
+  <ol class="svelte-1pme7pn"><li class="svelte-1pme7pn"><div class="body svelte-1pme7pn"><span class="title svelte-1pme7pn">Ideation and Exploration:</span>
+          <span class="subtitle"><!-- HTML_TAG_START --><p>From the spark of an idea to its solid conceptualization, we accompany you on the journey of discovery. Using strategic questions, we take your concepts to the next level.</p><p></p><!-- HTML_TAG_END --></span></div>
+      </li><li class="svelte-1pme7pn"><div class="body svelte-1pme7pn"><span class="title svelte-1pme7pn">Design and Development</span>
+          <span class="subtitle"><!-- HTML_TAG_START --><p>Our technical experts transform concepts into functional and elegant prototypes. We harness constant questioning to create products with impeccable design and exceptional functionality.</p><p></p><!-- HTML_TAG_END --></span></div>
+      </li><li class="svelte-1pme7pn"><div class="body svelte-1pme7pn"><span class="title svelte-1pme7pn">Evaluation and Enhancement</span>
+          <span class="subtitle"><!-- HTML_TAG_START --><p>We don't stop at implementation. We continue to question and enhance our products to ensure they remain at the forefront of innovation and meet your changing expectations.</p><p></p><!-- HTML_TAG_END --></span></div>
+      </li></ol>
+  </section></div> 
+<div class="section" id="section-92764ae6"><section class="section-container svelte-2jrqcr"><div class="card svelte-2jrqcr"><h2 class="heading svelte-2jrqcr">Join the Innovation</h2>
+    <div class="body svelte-2jrqcr"><!-- HTML_TAG_START --><p>Do you have an idea that you're eager to bring into the digital world? We're excited to hear about it! Contact us and let's embark on a journey of discovery together.</p><!-- HTML_TAG_END --></div>
+    <div class="buttons svelte-2jrqcr"><a class="button svelte-2jrqcr" href="#contact">
+        <span>Contact Us</span>
+      </a></div></div></section></div> 
+<div class="section" id="section-537ecf05"><section><div class="section-container"><h2 class="heading svelte-1qguxgp">Our Process</h2>
+    <ul class="svelte-1qguxgp"><li class="svelte-1qguxgp"><div class="icon svelte-1qguxgp">1</div>
+          <h3 class="title svelte-1qguxgp">Initial Exploration and Deep Questioning</h3>
+          <div class="description svelte-1qguxgp">In this first step, Maieutica delves into the proposed technological idea. The company's experts guide teams through fundamental questions that explore the bigger picture.</div>
+        </li><li class="svelte-1qguxgp"><div class="icon svelte-1qguxgp">2</div>
+          <h3 class="title svelte-1qguxgp">Strategic Breakdown and Detailed Analysis</h3>
+          <div class="description svelte-1qguxgp">Once the idea has been explored from a broad perspective, Maieutica makes a strategic breakdown. The essential components that will make up the technological solution are analyzed.</div>
+        </li><li class="svelte-1qguxgp"><div class="icon svelte-1qguxgp">3</div>
+          <h3 class="title svelte-1qguxgp">Iteration, Validation, and Continuous Improvement</h3>
+          <div class="description svelte-1qguxgp">After the idea has been broken down and defined, we collaborate with the client to develop functional prototypes and proof of concepts to assess the effectiveness of the solution</div>
+        </li></ul></div></section></div> 
+<div class="section" id="section-d1e50ba5"><section class="section-container svelte-1mz3n3v"><div class="card svelte-1mz3n3v"><img src="https://jwcimbotfjfwtjjxuqkb.supabase.co/storage/v1/object/public/images/e3b8fe15-9bb1-4f72-8c6b-7fe89f31cf8e/1691713543738socrates-5650230_1280.png" alt="https://jwcimbotfjfwtjjxuqkb.supabase.co/storage/v1/object/public/images/e3b8fe15-9bb1-4f72-8c6b-7fe89f31cf8e/1691713543738socrates-5650230_1280.png" class="svelte-1mz3n3v">
+    <div class="card-content svelte-1mz3n3v"><div class="title svelte-1mz3n3v">The power of the maieuthic method</div>
+      <div class="description subheading svelte-1mz3n3v"><!-- HTML_TAG_START --><p>Questioning is not merely a search for answers; it's a journey of that opens doors to uncharted territories. In innovation, the power of questioning is unparalleled. It dismantles assumptions, challenges norms, and fuels breakthroughs. Just as a single question can ignite a spark, a series of questions can illuminate entire pathways of innovation.</p><!-- HTML_TAG_END --></div>
+      <a class="button svelte-1mz3n3v" href="https://globaleduca.hypotheses.org/med-the-museum-global-education-and-cultural-diversity/autonomy-pedagogy-educators-gallery/critical-pedagogy/remote-background-from-criticism-to-traditional-pedagogy/socrates-and-maiutics">Read more</a></div></div>
+  <div class="main svelte-1mz3n3v"><h2 class="heading">Exploring the Maieutica Way</h2>
+    <h3 class="subheading svelte-1mz3n3v"><!-- HTML_TAG_START --><p>At Maieutica, curiosity drives our process. We question assumptions, step into uncharted territory, and uncover hidden potential. Through iterative refinement, we fine-tune solutions to exceed expectations and redefine possibilities.</p><!-- HTML_TAG_END --></h3>
+    <ul class="svelte-1mz3n3v"><li class="svelte-1mz3n3v"><span class="icon svelte-1mz3n3v"></span>
+          <span class="label svelte-1mz3n3v">Curiosity as Catalyst</span>
+        </li><li class="svelte-1mz3n3v"><span class="icon svelte-1mz3n3v"></span>
+          <span class="label svelte-1mz3n3v">Visionary Blueprints</span>
+        </li><li class="svelte-1mz3n3v"><span class="icon svelte-1mz3n3v"></span>
+          <span class="label svelte-1mz3n3v">Innovation through Collaboration</span>
+        </li></ul></div></section></div> 
+<div class="section" id="section-5a2766b1"><section class="section-container  svelte-5f4mlk"><h2 class="heading svelte-5f4mlk">Our Values</h2>
+  <div class="items svelte-5f4mlk"><div class="item svelte-5f4mlk"><h2 class="title svelte-5f4mlk"><span class="number svelte-5f4mlk">1</span> Customers Guide Our Path</h2>
+        <div class="description"><!-- HTML_TAG_START --><p>We prioritize understanding their needs, challenges, and aspirations to create solutions that truly make a difference.</p><!-- HTML_TAG_END --></div>
+      </div><div class="item svelte-5f4mlk"><h2 class="title svelte-5f4mlk"><span class="number svelte-5f4mlk">2</span> Think Big, Move Fast</h2>
+        <div class="description"><!-- HTML_TAG_START --><p>Innovation knows no bounds. We embrace bold thinking and swift action. At Maieutica, we dare to dream big and act quickly. </p><!-- HTML_TAG_END --></div>
+      </div><div class="item svelte-5f4mlk"><h2 class="title svelte-5f4mlk"><span class="number svelte-5f4mlk">3</span> Take Ownership</h2>
+        <div class="description"><!-- HTML_TAG_START --><p>Responsibility fuels excellence. We believe in being accountable stewards of our projects, ensuring that each task is handled with dedication and integrity.</p><p></p><!-- HTML_TAG_END --></div>
+      </div><div class="item svelte-5f4mlk"><h2 class="title svelte-5f4mlk"><span class="number svelte-5f4mlk">4</span> Better Together</h2>
+        <div class="description"><!-- HTML_TAG_START --><p>Collaboration is our cornerstone. We understand that the best results arise from diverse perspectives working in harmony. By</p><!-- HTML_TAG_END --></div>
+      </div><div class="item svelte-5f4mlk"><h2 class="title svelte-5f4mlk"><span class="number svelte-5f4mlk">5</span> Deliver Quality On Time</h2>
+        <div class="description"><!-- HTML_TAG_START --><p>Quality and timeliness are non-negotiable.  We believe that consistent excellence is the foundation of trust and success.</p><p></p><!-- HTML_TAG_END --></div>
+      </div><div class="item svelte-5f4mlk"><h2 class="title svelte-5f4mlk"><span class="number svelte-5f4mlk">6</span> Ask Questions</h2>
+        <div class="description"><!-- HTML_TAG_START --><p>Curiosity drives progress. At Maieutica, asking the right questions is the compass that guides our journey towards revolutionary innovations.</p><!-- HTML_TAG_END --></div>
+      </div></div></section></div> 
+<div class="section" id="section-96b50552"><section class="section-container svelte-1ul9dl2"><div class="container svelte-1ul9dl2"><h2 class="heading svelte-1ul9dl2">Building Technological Foundations</h2>
+    <h3 class="subheading svelte-1ul9dl2">Just as a well-constructed house begins with a conversation between the homeowner and the architect, so does the journey of innovation at Maieutica. Think of us as your technology architects, ready to listen, understand, and collaborate to bring your ideas to life.
+
+</h3></div>
+  <img src="https://jwcimbotfjfwtjjxuqkb.supabase.co/storage/v1/object/public/images/e3b8fe15-9bb1-4f72-8c6b-7fe89f31cf8e/kaleidico-26MJGnCM0Wc-unsplash.jpg1691715974873" alt="" class="svelte-1ul9dl2"></section></div> 
+<div class="section" id="section-a30669ef"><section class="section-container svelte-88rbos"><h2 class="heading svelte-88rbos">Frequently Asked Questions</h2>
+  <div class="accordion svelte-88rbos"><div class="item svelte-88rbos active"><button class="svelte-88rbos"><span class="svelte-88rbos">What is Maieutica's approach to innovation?</span>
+        <span class="icon svelte-88rbos"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 256 256" class="iconify iconify--ph"><!-- HTML_TAG_START --><path fill="currentColor" d="m216.49 104.49l-80 80a12 12 0 0 1-17 0l-80-80a12 12 0 0 1 17-17L128 159l71.51-71.52a12 12 0 0 1 17 17Z"/><!-- HTML_TAG_END --></svg>
+        </span></button>
+      <div class="description svelte-88rbos"><!-- HTML_TAG_START --><p>At Maieutica, we embrace a unique blend of Socratic inquiry and technical expertise. Our method involves questioning assumptions, exploring possibilities, and crafting innovative solutions that challenge conventions and drive progress.</p><!-- HTML_TAG_END --></div> 
+      <noscript><div class="description svelte-88rbos"><!-- HTML_TAG_START --><p>At Maieutica, we embrace a unique blend of Socratic inquiry and technical expertise. Our method involves questioning assumptions, exploring possibilities, and crafting innovative solutions that challenge conventions and drive progress.</p><!-- HTML_TAG_END --></div></noscript>
+    </div><div class="item svelte-88rbos"><button class="svelte-88rbos"><span class="svelte-88rbos">What industries does Maieutica serve?</span>
+        <span class="icon svelte-88rbos"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 256 256" class="iconify iconify--ph"><!-- HTML_TAG_START --><path fill="currentColor" d="m216.49 104.49l-80 80a12 12 0 0 1-17 0l-80-80a12 12 0 0 1 17-17L128 159l71.51-71.52a12 12 0 0 1 17 17Z"/><!-- HTML_TAG_END --></svg>
+        </span></button>
+       
+      <noscript><div class="description svelte-88rbos"><!-- HTML_TAG_START --><p>We work across a wide range of industries, including but not limited to technology, healthcare, finance, and manufacturing. Our adaptable approach allows us to tailor solutions to the specific needs and challenges of each sector.</p><!-- HTML_TAG_END --></div></noscript>
+    </div><div class="item svelte-88rbos"><button class="svelte-88rbos"><span class="svelte-88rbos">What sets Maieutica apart from other technology firms?</span>
+        <span class="icon svelte-88rbos"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 256 256" class="iconify iconify--ph"><!-- HTML_TAG_START --><path fill="currentColor" d="m216.49 104.49l-80 80a12 12 0 0 1-17 0l-80-80a12 12 0 0 1 17-17L128 159l71.51-71.52a12 12 0 0 1 17 17Z"/><!-- HTML_TAG_END --></svg>
+        </span></button>
+       
+      <noscript><div class="description svelte-88rbos"><!-- HTML_TAG_START --><p>Our foundation lies in the fusion of questioning and technical expertise. We don't just develop technology; we cultivate a mindset of continuous curiosity that fuels the creation of groundbreaking solutions. Our commitment to Socratic inquiry ensures that every innovation is born from thorough exploration and a quest for excellence.</p><!-- HTML_TAG_END --></div></noscript>
+    </div><div class="item svelte-88rbos"><button class="svelte-88rbos"><span class="svelte-88rbos">How does Maieutica determine pricing for its services?</span>
+        <span class="icon svelte-88rbos"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 256 256" class="iconify iconify--ph"><!-- HTML_TAG_START --><path fill="currentColor" d="m216.49 104.49l-80 80a12 12 0 0 1-17 0l-80-80a12 12 0 0 1 17-17L128 159l71.51-71.52a12 12 0 0 1 17 17Z"/><!-- HTML_TAG_END --></svg>
+        </span></button>
+       
+      <noscript><div class="description svelte-88rbos"><!-- HTML_TAG_START --><p>Maieutica's pricing is tailored to each project's unique requirements. Factors considered include the complexity of the solution, the scope of work, development timelines, and the level of customization needed. We work closely with our clients to provide transparent and competitive pricing that aligns with the value and impact our services deliver. Our aim is to ensure a fair and mutually beneficial arrangement for every project we undertake.</p><!-- HTML_TAG_END --></div></noscript>
+    </div><div class="item svelte-88rbos"><button class="svelte-88rbos"><span class="svelte-88rbos">How does the Socratic method enhance Maieutica's innovation process?</span>
+        <span class="icon svelte-88rbos"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 256 256" class="iconify iconify--ph"><!-- HTML_TAG_START --><path fill="currentColor" d="m216.49 104.49l-80 80a12 12 0 0 1-17 0l-80-80a12 12 0 0 1 17-17L128 159l71.51-71.52a12 12 0 0 1 17 17Z"/><!-- HTML_TAG_END --></svg>
+        </span></button>
+       
+      <noscript><div class="description svelte-88rbos"><!-- HTML_TAG_START --><p>The Socratic method forms the backbone of our innovation process. It encourages us to delve into the core of ideas, explore multiple angles, and push the boundaries of what's possible. By consistently questioning and challenging ideas, we ensure that our solutions are well-rounded, thoroughly examined, and capable of driving real impact in the rapidly evolving technological landscape.</p><!-- HTML_TAG_END --></div></noscript>
+    </div><div class="item svelte-88rbos"><button class="svelte-88rbos"><span class="svelte-88rbos">What if our organization lacks the necessary staff or expertise for a project with Maieutica?</span>
+        <span class="icon svelte-88rbos"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 256 256" class="iconify iconify--ph"><!-- HTML_TAG_START --><path fill="currentColor" d="m216.49 104.49l-80 80a12 12 0 0 1-17 0l-80-80a12 12 0 0 1 17-17L128 159l71.51-71.52a12 12 0 0 1 17 17Z"/><!-- HTML_TAG_END --></svg>
+        </span></button>
+       
+      <noscript><div class="description svelte-88rbos"><!-- HTML_TAG_START --><p>If your organization doesn't currently have the required staff or expertise, don't worry. At Maieutica, we're committed to ensuring the success of your project. We will work closely with you to understand your needs and the scope of the project. If additional expertise or team members are needed, we will leverage our network and resources to find the right talent before beginning the project. Our goal is to provide you with a comprehensive and capable team to bring your vision to life.</p><!-- HTML_TAG_END --></div></noscript>
+    </div></div></section></div> 
+<div class="section" id="section-848c87a0"><section id="contact" class="section-container svelte-15f55d3"><div class="content svelte-15f55d3"><h2 class="heading">Contact Us</h2>
+    <div class="body svelte-15f55d3"><!-- HTML_TAG_START -->Whether you have questions, feedback, or just want to say hello, we're always ready to hear from you. Please fill out the contact form, and we'll do our best to respond within 24-48 hours.<!-- HTML_TAG_END --></div>
+    <div class="social-links svelte-15f55d3"><a href="/" class="svelte-15f55d3"><span class="icon svelte-15f55d3"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START --><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/><!-- HTML_TAG_END --></svg></span>
+          Github
+        </a><a href="/" class="svelte-15f55d3"><span class="icon svelte-15f55d3"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START --><path fill="currentColor" d="M12 2.04c-5.5 0-10 4.49-10 10.02c0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89c1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02Z"/><!-- HTML_TAG_END --></svg></span>
+          Facebook
+        </a></div></div>
+  <form class="svelte-15f55d3"><label class="svelte-15f55d3"><span class="svelte-15f55d3">Name</span>
+          <input type="text" placeholder="John Doe" class="svelte-15f55d3">
+        </label><label class="svelte-15f55d3"><span class="svelte-15f55d3">Email</span>
+          <input type="email" placeholder="johndoe@johndoe.com" class="svelte-15f55d3">
+        </label>
+    <button class="button svelte-15f55d3" type="submit">Submit</button></form></section></div> 
+<div class="section" id="section-752d5bce"><footer class="section-container svelte-18bom7r"><nav class="svelte-18bom7r"><a class="link svelte-18bom7r" href="/">Home</a><a class="link svelte-18bom7r" href="/about">About</a></nav>
+  <span class="primo svelte-18bom7r"><a href="https://maieutica.mx" class="svelte-18bom7r">Maieutica</a> © 2023</span>
+  <div class="social-links svelte-18bom7r"><a href="/" aria-label="facebook" class="svelte-18bom7r"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START --><path fill="currentColor" d="M12 2.04c-5.5 0-10 4.49-10 10.02c0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89c1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02Z"/><!-- HTML_TAG_END --></svg>
+      </a><a href="/" aria-label="instagram" class="svelte-18bom7r">
+      </a></div></footer></div> 
+
+      <script type="module">
+      import('/_symbols/97e9e35f-18c2-4b96-95d1-4fcefa304cc0.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-d1e50ba5'),
+              hydrate: true,
+              props: {"card":{"link":{"url":"https://globaleduca.hypotheses.org/med-the-museum-global-education-and-cultural-diversity/autonomy-pedagogy-educators-gallery/critical-pedagogy/remote-background-from-criticism-to-traditional-pedagogy/socrates-and-maiutics","label":"Read more"},"image":{"alt":"","src":"https://jwcimbotfjfwtjjxuqkb.supabase.co/storage/v1/object/public/images/e3b8fe15-9bb1-4f72-8c6b-7fe89f31cf8e/1691713543738socrates-5650230_1280.png","url":"https://jwcimbotfjfwtjjxuqkb.supabase.co/storage/v1/object/public/images/e3b8fe15-9bb1-4f72-8c6b-7fe89f31cf8e/1691713543738socrates-5650230_1280.png","size":936},"title":"The power of the maieuthic method","description":{"html":"<p>Questioning is not merely a search for answers; it's a journey of that opens doors to uncharted territories. In innovation, the power of questioning is unparalleled. It dismantles assumptions, challenges norms, and fuels breakthroughs. Just as a single question can ignite a spark, a series of questions can illuminate entire pathways of innovation.</p>","markdown":"Questioning is not merely a search for answers; it's a journey of that opens doors to uncharted territories. In innovation, the power of questioning is unparalleled. It dismantles assumptions, challenges norms, and fuels breakthroughs. Just as a single question can ignite a spark, a series of questions can illuminate entire pathways of innovation.\n\n"}},"heading":"Exploring the Maieutica Way","subheading":{"html":"<p>At Maieutica, curiosity drives our process. We question assumptions, step into uncharted territory, and uncover hidden potential. Through iterative refinement, we fine-tune solutions to exceed expectations and redefine possibilities.</p>","markdown":"At Maieutica, curiosity drives our process. We question assumptions, step into uncharted territory, and uncover hidden potential. Through iterative refinement, we fine-tune solutions to exceed expectations and redefine possibilities.\n\n"},"list_items":[{"icon":"material-symbols:check-circle-rounded","label":"Curiosity as Catalyst"},{"icon":"material-symbols:check-circle-rounded","label":"Visionary Blueprints"},{"icon":"material-symbols:check-circle-rounded","label":"Innovation through Collaboration"}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/a7fd7aaa-444d-474e-8c38-c758fe7a1193.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-537ecf05'),
+              hydrate: true,
+              props: {"heading":"Our Process","icon_list":[{"icon":"ant-design:calculator-filled","title":"Initial Exploration and Deep Questioning","description":"In this first step, Maieutica delves into the proposed technological idea. The company's experts guide teams through fundamental questions that explore the bigger picture."},{"icon":"fluent:money-hand-24-filled","title":"Strategic Breakdown and Detailed Analysis","description":"Once the idea has been explored from a broad perspective, Maieutica makes a strategic breakdown. The essential components that will make up the technological solution are analyzed."},{"icon":"ant-design:stock-outlined","title":"Iteration, Validation, and Continuous Improvement","description":"After the idea has been broken down and defined, we collaborate with the client to develop functional prototypes and proof of concepts to assess the effectiveness of the solution"}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/51eea565-4c4d-484d-95cb-ccbd5981cd8b.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-d9c32544'),
+              hydrate: true,
+              props: {"logo":{"image":{"alt":"","url":"https://jwcimbotfjfwtjjxuqkb.supabase.co/storage/v1/object/public/images/e3b8fe15-9bb1-4f72-8c6b-7fe89f31cf8e/1.png1691714192364"}},"site_nav":[{"link":{"url":"/about","label":"About"}}],"primary_cta":{"url":"/consultation","label":"Sign up"}}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/65694daa-5243-4b8c-985f-9ef575b811d8.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-92764ae6'),
+              hydrate: true,
+              props: {"heading":"Join the Innovation","body":{"html":"<p>Do you have an idea that you're eager to bring into the digital world? We're excited to hear about it! Contact us and let's embark on a journey of discovery together.</p>","markdown":"Do you have an idea that you're eager to bring into the digital world? We're excited to hear about it! Contact us and let's embark on a journey of discovery together.\n\n"},"buttons":[{"icon":"Officia velit elit","link":{"url":"#contact","label":"Contact Us"}}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/6ab4121f-43bd-4255-abd9-6d44803eb5bb.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-752d5bce'),
+              hydrate: true,
+              props: {"nav":[{"link":{"url":"/","label":"Home"}},{"link":{"url":"/about","label":"About"}}],"social":[{"icon":"mdi:facebook","link":{"url":"/","label":"facebook"}},{"icon":"mdi:instagram","link":{"url":"/","label":"instagram"}}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/acd52eb0-ba0e-4530-bb0e-634ae611427a.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-a30669ef'),
+              hydrate: true,
+              props: {"heading":"Frequently Asked Questions","items":[{"title":"What is Maieutica's approach to innovation?","description":{"html":"<p>At Maieutica, we embrace a unique blend of Socratic inquiry and technical expertise. Our method involves questioning assumptions, exploring possibilities, and crafting innovative solutions that challenge conventions and drive progress.</p>","markdown":"At Maieutica, we embrace a unique blend of Socratic inquiry and technical expertise. Our method involves questioning assumptions, exploring possibilities, and crafting innovative solutions that challenge conventions and drive progress."}},{"title":"What industries does Maieutica serve?","description":{"html":"<p>We work across a wide range of industries, including but not limited to technology, healthcare, finance, and manufacturing. Our adaptable approach allows us to tailor solutions to the specific needs and challenges of each sector.</p>","markdown":"We work across a wide range of industries, including but not limited to technology, healthcare, finance, and manufacturing. Our adaptable approach allows us to tailor solutions to the specific needs and challenges of each sector."}},{"title":"What sets Maieutica apart from other technology firms?","description":{"html":"<p>Our foundation lies in the fusion of questioning and technical expertise. We don't just develop technology; we cultivate a mindset of continuous curiosity that fuels the creation of groundbreaking solutions. Our commitment to Socratic inquiry ensures that every innovation is born from thorough exploration and a quest for excellence.</p>","markdown":"Our foundation lies in the fusion of questioning and technical expertise. We don't just develop technology; we cultivate a mindset of continuous curiosity that fuels the creation of groundbreaking solutions. Our commitment to Socratic inquiry ensures that every innovation is born from thorough exploration and a quest for excellence."}},{"title":"How does Maieutica determine pricing for its services?","description":{"html":"<p>Maieutica's pricing is tailored to each project's unique requirements. Factors considered include the complexity of the solution, the scope of work, development timelines, and the level of customization needed. We work closely with our clients to provide transparent and competitive pricing that aligns with the value and impact our services deliver. Our aim is to ensure a fair and mutually beneficial arrangement for every project we undertake.</p>","markdown":"Maieutica's pricing is tailored to each project's unique requirements. Factors considered include the complexity of the solution, the scope of work, development timelines, and the level of customization needed. We work closely with our clients to provide transparent and competitive pricing that aligns with the value and impact our services deliver. Our aim is to ensure a fair and mutually beneficial arrangement for every project we undertake."}},{"title":"How does the Socratic method enhance Maieutica's innovation process?","description":{"html":"<p>The Socratic method forms the backbone of our innovation process. It encourages us to delve into the core of ideas, explore multiple angles, and push the boundaries of what's possible. By consistently questioning and challenging ideas, we ensure that our solutions are well-rounded, thoroughly examined, and capable of driving real impact in the rapidly evolving technological landscape.</p>","markdown":"The Socratic method forms the backbone of our innovation process. It encourages us to delve into the core of ideas, explore multiple angles, and push the boundaries of what's possible. By consistently questioning and challenging ideas, we ensure that our solutions are well-rounded, thoroughly examined, and capable of driving real impact in the rapidly evolving technological landscape."}},{"title":"What if our organization lacks the necessary staff or expertise for a project with Maieutica?","description":{"html":"<p>If your organization doesn't currently have the required staff or expertise, don't worry. At Maieutica, we're committed to ensuring the success of your project. We will work closely with you to understand your needs and the scope of the project. If additional expertise or team members are needed, we will leverage our network and resources to find the right talent before beginning the project. Our goal is to provide you with a comprehensive and capable team to bring your vision to life.</p>","markdown":"If your organization doesn't currently have the required staff or expertise, don't worry. At Maieutica, we're committed to ensuring the success of your project. We will work closely with you to understand your needs and the scope of the project. If additional expertise or team members are needed, we will leverage our network and resources to find the right talent before beginning the project. Our goal is to provide you with a comprehensive and capable team to bring your vision to life."}}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/04c4c5ec-a0cb-433d-b28e-f625940d1fc9.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-848c87a0'),
+              hydrate: true,
+              props: {"heading":"Contact Us","subheading":"Whether you have questions, feedback, or just want to say hello, we're always ready to hear from you. Please fill out the contact form, and we'll do our best to respond within 24-48 hours.","social":[{"icon":"mdi:github","link":{"url":"/","label":"Github"}},{"icon":"mdi:facebook","link":{"url":"/","label":"Facebook"}}],"inputs":[{"type":"text","label":"Name","placeholder":"John Doe"},{"type":"email","label":"Email","placeholder":"johndoe@johndoe.com"}],"submit_label":"Submit"}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    </script>
+    </body>
+  </html>
+  

@@ -1,0 +1,241 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta name="generator" content="Primo" />
+      <!-- HEAD_svelte-174itbn_START --><style>/* Reset & standardize default styles */
+@import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css") layer;
+
+/* Design tokens (apply to components) */
+:root {
+  /* Custom theme options */
+  --color-accent: #0F4C81;
+  --color-accent-2: #ff794d;
+
+  /* Base values */
+  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+  --border-radius: 8px;
+  --border-color: #e1ecf0;
+}
+
+/* Root element (use instead of `body`) */
+#page {
+  font-family: system-ui, sans-serif;
+  color: #1d263a;
+  line-height: 1.2;
+  font-size: 1.125rem;
+  background: white;
+}
+
+/* Elements */
+.section-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+a.link {
+  line-height: 1.3;
+  font-weight: 500;
+  border-bottom: 2px solid;
+  transform: translateY(-2px); /* move link back into place */
+  transition: var(--transition, 0.1s border);
+}
+
+a.link:hover {
+    border-color: transparent;
+  }
+
+.heading {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.subheading {
+  font-weight: 400;
+  line-height: 1.5;
+  opacity: 90%;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: white;
+  font-weight: 500;
+  background: var(--color-accent, rebeccapurple);
+  border-radius: 3rem;
+  padding: 15px 25px;
+  transition: var(--transition, 0.1s box-shadow);
+  border: 0;
+}
+
+/* reset */
+
+.button:hover {
+    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);
+  }
+
+.button.inverted {
+    background: transparent;
+    color: var(--color-accent, rebeccapurple);
+  }
+
+/* Content Section */
+.section .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+.section .content p {
+    padding: 0.25rem 0;
+    line-height: 1.5;
+  }
+.section .content img {
+    width: 100%;
+    margin: 2rem 0;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+  }
+.section .content a.link {
+  }
+.section .content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+.section .content h2 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+.section .content h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+.section .content ul {
+    list-style: disc;
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+  }
+.section .content ol {
+    list-style: decimal;
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+  }
+.section .content blockquote {
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+  }
+</style><!-- HEAD_svelte-174itbn_END -->
+      <style>.section-container.svelte-1d1kcsx.svelte-1d1kcsx{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem}.logo.svelte-1d1kcsx.svelte-1d1kcsx{font-size:1.5rem;font-weight:600;line-height:1.2;max-width:150px}.desktop-nav.svelte-1d1kcsx.svelte-1d1kcsx{display:none;align-items:center;justify-content:space-between;width:100%}.desktop-nav.svelte-1d1kcsx nav.svelte-1d1kcsx{display:flex;align-items:center;gap:1.5rem}.desktop-nav.svelte-1d1kcsx nav a.link.svelte-1d1kcsx{border-color:transparent;transition:border-color 0.1s;font-size:0.95rem}.desktop-nav.svelte-1d1kcsx nav a.link.svelte-1d1kcsx:hover{border-color:initial}@media(min-width: 800px){.desktop-nav.svelte-1d1kcsx.svelte-1d1kcsx{display:flex
+}}.mobile-nav.svelte-1d1kcsx.svelte-1d1kcsx{display:flex;align-items:center;justify-content:space-between;width:100%;font-weight:500}@media(min-width: 800px){.mobile-nav.svelte-1d1kcsx.svelte-1d1kcsx{display:none
+}}#popup.svelte-1d1kcsx.svelte-1d1kcsx{font-size:1.25rem;display:grid;gap:1rem;position:absolute;text-align:center;background-color:var(--background-color, white);box-shadow:var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));border-radius:var(--border-radius);inset:0.5rem;bottom:initial;padding:2rem;z-index:1}#popup.svelte-1d1kcsx button#close.svelte-1d1kcsx{position:absolute;right:1rem;top:1rem}
+.section-container.svelte-1cykhg8.svelte-1cykhg8{display:grid;place-items:center;padding-bottom:3rem}.main.svelte-1cykhg8.svelte-1cykhg8{text-align:center;margin-bottom:2rem;max-width:650px}.image.svelte-1cykhg8.svelte-1cykhg8{border-radius:var(--border-radius);aspect-ratio:2.25/1;-o-object-fit:cover;object-fit:cover}.story-container.svelte-1cykhg8.svelte-1cykhg8{margin-top:30px}.story-container.svelte-1cykhg8 p.svelte-1cykhg8{margin-top:1rem}.story-container.svelte-1cykhg8 h2.svelte-1cykhg8{text-transform:uppercase;font-weight:bold;font-size:1.5rem;text-align:center;margin:3rem 0px 2rem 0}
+.section-container.svelte-1hues2b.svelte-1hues2b{padding:3rem 5rem}ul.svelte-1hues2b.svelte-1hues2b{display:grid;grid-template-columns:1fr 1fr;gap:8rem}ul.svelte-1hues2b li.svelte-1hues2b{display:flex;gap:2rem}ul.svelte-1hues2b li .icon.svelte-1hues2b{color:var(--color-accent-2);font-size:3rem}ul.svelte-1hues2b li .description.svelte-1hues2b{line-height:1.4;opacity:90%}
+section.svelte-cowe8h.svelte-cowe8h{color:white;background:#1d263a}.section-container.svelte-cowe8h.svelte-cowe8h{width:100%;display:grid;gap:3rem}@media(min-width: 700px){.section-container.svelte-cowe8h.svelte-cowe8h{grid-template-columns:3fr 2fr
+}}.main.svelte-cowe8h.svelte-cowe8h{display:grid;gap:2rem;place-content:start;max-width:550px}.main.svelte-cowe8h .subheading.svelte-cowe8h{opacity:0.75;font-weight:400;line-height:1.875rem}.main.svelte-cowe8h ul.svelte-cowe8h{display:grid;gap:1.25rem}.main.svelte-cowe8h li.svelte-cowe8h{display:flex;align-items:center;gap:0.75rem}.main.svelte-cowe8h li .icon.svelte-cowe8h{color:var(--color-accent)}.card.svelte-cowe8h.svelte-cowe8h{color:#1d263a;background:white;border-radius:var(--border-radius);padding:2rem}.card.svelte-cowe8h form.svelte-cowe8h{display:grid;gap:1rem}.card.svelte-cowe8h label.svelte-cowe8h{display:grid;gap:4px;font-size:0.875rem;font-weight:500}.card.svelte-cowe8h label span.svelte-cowe8h{margin-bottom:0.25rem}.card.svelte-cowe8h label.has-textarea.svelte-cowe8h{grid-column:var(--wide)}.card.svelte-cowe8h input.svelte-cowe8h,.card.svelte-cowe8h textarea.svelte-cowe8h{-webkit-appearance:none;box-shadow:0 0 0 1px #eee;border-radius:4px;padding:1rem;transition:0.1s box-shadow}.card.svelte-cowe8h input.svelte-cowe8h:focus-visible,.card.svelte-cowe8h textarea.svelte-cowe8h:focus-visible{outline:none;box-shadow:0 0 0 1px var(--color-accent)}.card.svelte-cowe8h .file.svelte-cowe8h{cursor:pointer}.card.svelte-cowe8h .file .field-item.svelte-cowe8h{display:flex;justify-content:space-between;padding:0}.card.svelte-cowe8h .file .field-item span.button-left.svelte-cowe8h{padding:1rem;flex:1;border-radius:8px 0 0 8px;border-right:none}.card.svelte-cowe8h .file .field-item span.button-right.svelte-cowe8h{display:flex;gap:1rem;padding:1rem;padding-left:2rem;border-radius:0 8px 8px 0}.card.svelte-cowe8h .file input.svelte-cowe8h{display:none}</style>
+    </head>
+    <body id="page">
+       
+<div class="section" id="section-23fa5bda"><header class="section-container svelte-1d1kcsx"><div class="desktop-nav svelte-1d1kcsx"><a href="/" class="logo svelte-1d1kcsx"><img src="https://jwcimbotfjfwtjjxuqkb.supabase.co/storage/v1/object/public/images/e3b8fe15-9bb1-4f72-8c6b-7fe89f31cf8e/1.png1691714192364" alt=""></a>
+    <nav class="svelte-1d1kcsx"><a class="link svelte-1d1kcsx" href="/about">About</a>
+      </nav></div>
+  <div class="mobile-nav svelte-1d1kcsx"><a href="/" class="logo svelte-1d1kcsx"><img src="https://jwcimbotfjfwtjjxuqkb.supabase.co/storage/v1/object/public/images/e3b8fe15-9bb1-4f72-8c6b-7fe89f31cf8e/1.png1691714192364" alt=""></a>
+    <button id="open" aria-label="Open mobile navigation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START --><g id="iconifySvelte0"><g id="iconifySvelte1"><g id="iconifySvelte2" fill="currentColor"><rect width="18" height="2" x="3" y="11" rx=".95" ry=".95"/><rect width="18" height="2" x="3" y="16" rx=".95" ry=".95"/><rect width="18" height="2" x="3" y="6" rx=".95" ry=".95"/></g></g></g><!-- HTML_TAG_END --></svg></button>
+    </div></header></div> 
+<div class="section" id="section-284c8777"><section class="section-container svelte-1cykhg8"><div class="main svelte-1cykhg8"><h1 class="heading svelte-1cykhg8">Our Story</h1>
+    </div>
+  <img class="image svelte-1cykhg8" src="https://images.unsplash.com/photo-1506869640319-fe1a24fd76dc?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1770&amp;q=80" alt="">
+  <div class="story-container svelte-1cykhg8"><p class="svelte-1cykhg8">Founded by two Tecnológico de Monterrey graduates in Information and Communication Technologies, Maieutica emerged from a shared passion for pushing the boundaries of technological advancement...</p>
+	<h2 class="svelte-1cykhg8">Pioneering Beginnings</h2>
+	<p class="svelte-1cykhg8">As <em>Ingenieros de Tecnologías de Información y Comunicación</em>, we embarked on our professional journeys driven by an insatiable curiosity and a relentless pursuit of excellence. Our time at Tec de Monterrey equipped us with the technical acumen and the critical thinking skills necessary to navigate the ever-evolving landscape of technology.</p>
+	<h2 class="svelte-1cykhg8">The Spark of Innovation</h2>
+	<p class="svelte-1cykhg8">Throughout our careers, we witnessed the transformative power of technology. It was this realization that ignited the spark for Maieutica. Inspired by the Socratic method, we recognized the potential of questioning as a catalyst for innovation. Our mission became clear: to bridge the gap between visionary ideas and tangible technological solutions.</p>
+	<h2 class="svelte-1cykhg8">Building on Experience</h2>
+	<p class="svelte-1cykhg8">With over two decades of collective experience in software development, we brought together our expertise to form Maieutica. Our journey has been marked by a commitment to continuous learning, a passion for exploration, and an unwavering dedication to our craft.</p>
+	<h2 class="svelte-1cykhg8">Our Vision</h2>
+	<p class="svelte-1cykhg8">At Maieutica, we stand at the intersection of philosophy and technology, where each question posed leads us closer to the realm of possibility. We envision a future where innovation is not just a concept, but a tangible force that drives progress across industries.</p>
+	
+	<h2 class="svelte-1cykhg8">Join Us on the Journey</h2>
+	<p class="svelte-1cykhg8">Our story is a testament to the power of collaboration, curiosity, and a relentless pursuit of innovation. As we move forward, we invite you to be a part of our story. Together, let&#39;s explore uncharted territories, challenge assumptions, and transform ideas into remarkable technological solutions that shape the world.</p></div></section></div> 
+<div class="section" id="section-2df80f53"><section class="section-container svelte-1hues2b"><ul class="svelte-1hues2b"><li class="svelte-1hues2b"><div class="icon svelte-1hues2b"></div>
+        <div class="description svelte-1hues2b">We are an industry-leading company that values honesty, integrity, and efficiency. Building quality products and caring for the users are what made us stand out since the beginning.</div>
+      </li><li class="svelte-1hues2b"><div class="icon svelte-1hues2b"></div>
+        <div class="description svelte-1hues2b">We’re a team of highly skilled professionals with years of experience in different fields vowed to revolutionize the people’s web experience.</div>
+      </li></ul></section></div> 
+<div class="section" id="section-deddfd8c"><section class="svelte-cowe8h"><div class="section-container svelte-cowe8h"><div class="main svelte-cowe8h"><h2 class="heading">Shape the Future with Us</h2>
+      <h3 class="subheading svelte-cowe8h">Are you ready to be a part of our journey towards innovation and transformation? Join the Maieutica team today and make an impact!</h3>
+      <ul class="svelte-cowe8h"><li class="svelte-cowe8h"><span class="icon svelte-cowe8h"></span>
+            <span class="label">Collaborate with a dynamic and innovative team</span>
+          </li><li class="svelte-cowe8h"><span class="icon svelte-cowe8h"></span>
+            <span class="label">Shape the future of technology through creative solutions</span>
+          </li><li class="svelte-cowe8h"><span class="icon svelte-cowe8h"></span>
+            <span class="label">Payroll and sales taxes</span>
+          </li></ul></div>
+    <div class="card svelte-cowe8h"><form class="svelte-cowe8h">
+            <label class="svelte-cowe8h"><span class="svelte-cowe8h">Name
+                  <span class="required svelte-cowe8h">*</span></span>
+                <input type="text" name="Name" placeholder="Name" class="svelte-cowe8h">
+              </label>
+            <label class="svelte-cowe8h"><span class="svelte-cowe8h">Email
+                  <span class="required svelte-cowe8h">*</span></span>
+                <input type="text" name="Email" placeholder="johndoe@email.com" class="svelte-cowe8h">
+              </label>
+            <label class="svelte-cowe8h"><span class="svelte-cowe8h">Subject
+                  </span>
+                <input type="text" name="Subject" placeholder="I want to join the team" class="svelte-cowe8h">
+              </label>
+            <label class="has-textarea svelte-cowe8h"><span class="svelte-cowe8h">Details
+                  <span class="required svelte-cowe8h">*</span>
+                  </span>
+                <textarea name="Details" placeholder="Tell us a bit about you." class="svelte-cowe8h"></textarea>
+              </label>
+          <button type="submit" class="button">
+            <span class="svelte-cowe8h">Submit</span></button></form></div></div></section></div> 
+
+      <script type="module">
+      import('/_symbols/51eea565-4c4d-484d-95cb-ccbd5981cd8b.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-23fa5bda'),
+              hydrate: true,
+              props: {"logo":{"image":{"alt":"","url":"https://jwcimbotfjfwtjjxuqkb.supabase.co/storage/v1/object/public/images/e3b8fe15-9bb1-4f72-8c6b-7fe89f31cf8e/1.png1691714192364"}},"site_nav":[{"link":{"url":"/about","label":"About"}}],"primary_cta":{"url":"/consultation","label":"Sign up"}}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/395dc9e8-0e3c-4d35-b37d-f21fdde0a1f3.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-2df80f53'),
+              hydrate: true,
+              props: {"icon_list":[{"icon":"material-symbols:heart-plus","description":"We are an industry-leading company that values honesty, integrity, and efficiency. Building quality products and caring for the users are what made us stand out since the beginning."},{"icon":"material-symbols:nature-people-sharp","description":"We’re a team of highly skilled professionals with years of experience in different fields vowed to revolutionize the people’s web experience."}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/c070be37-46e2-4f8e-ab11-4c023e9f87df.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-deddfd8c'),
+              hydrate: true,
+              props: {"heading":"Shape the Future with Us","subheading":"Are you ready to be a part of our journey towards innovation and transformation? Join the Maieutica team today and make an impact!","list_items":[{"icon":"material-symbols:check-circle-rounded","label":"Collaborate with a dynamic and innovative team"},{"icon":"material-symbols:check-circle-rounded","label":"Shape the future of technology through creative solutions"},{"icon":"material-symbols:check-circle-rounded","label":"Payroll and sales taxes"}],"form":{"fields":[{"type":"text","label":"Name","required":"Ipsum magna occaecat","placeholder":"Name"},{"type":"email","label":"Email","required":true,"placeholder":"johndoe@email.com"},{"type":"text","label":"Subject","required":"","placeholder":"I want to join the team"},{"type":"textarea","label":"Details","required":true,"placeholder":"Tell us a bit about you."}],"submission_error":"<p>Something happened, your message wasn't sent.</p>","submission_confirmation":"<p>Thanks for submitting that!</p>"}}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    </script>
+    </body>
+  </html>
+  
